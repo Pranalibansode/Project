@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script>
+        function geeks(msg, gfg) {
+            var confirmBox = $("#confirm");
+              
+            /* Trace message to display */
+            confirmBox.find(".message").text(msg);
+              
+            /* Calling function */
+            confirmBox.find(".yes").unbind().click(function() 
+            {
+            confirmBox.hide();
+            });
+            confirmBox.find(".yes").click(gfg);
+            confirmBox.show();
+              
+            confirmBox.find(".no").unbind().click(function() 
+            {
+            confirmBox.hide();
+            });
+            confirmBox.find(".no").click(gfg);
+            confirmBox.show();
+        }
+    </script>
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #67ABC1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading{
+    width: 80%;
+}
+.logo{
+    width: 350px;
+    height:70px;
+}
+.heading h1{
+    font-size:20px;
+    font-weight: 400;
+    color: #412277;
+}
+.container{
+    width: 80%;
+    height:100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 90%;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 5px 10px 38px rgba(0,0,0,0.2);
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+}
+.image{
+    width: 45%;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrap2{
+    width: 80%;
+    position: relative;
+    border-bottom: 2px solid #b2b2b2;
+    margin-bottom: 13px;
+}
+.wrap{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+.f1{
+    border-bottom:2px solid #b2b2b2 ;
+    width: 40%;
+    position: relative;
+}
+.f2{
+    border-bottom:2px solid #b2b2b2 ;
+    margin-left: auto;
+    width: 50%;
+    position: relative;
+}
+label{
+    font-size: 12px;
+    color: #1F647B;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    min-height: 25px;
+    border-bottom: none;
+    padding: 15px 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 2px;
+}
+input{
+    border:none;
+    border-bottom: 1px solid #2980b9;
+    outline:none;
+    width: 100%;
+    font-size: 15px;
+    background: transparent;
+    color: #1F647B;
+    font-weight: 500;
+    padding: 1px 0px;
+}
+first row{
+    display:flex;
+}
+/************BUTTON*****************/
+.btn{
+    margin-top: 2px;
+    width: 200px;
+    height: 55px;
+    border-radius: 40px;
+    outline: none;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    background: #445a94;
+    color: #fff;
+    box-shadow: 8px 10px 30px rgba(0, 0, 0, 0.329);
+    transition: 0.4s;
+}
+.btn:hover{
+    background: #4b2888;
+    color: #fff;
+}
+/*************INPUT ANIMATION-SPAN********************/
+
+.focus-input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.focus-input::before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.6s;
+    background: #412277;
+}
+input:focus + .focus-input::before{
+    width: 100%;
+}
+.has-val.input + .focus-input::before{
+    width: 100%;
+}
+.focus-input2{
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.focus-input2::before{
+    content: "";
+    
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.6s;
+    background: #412277;
+}
+input:focus + .focus-input2::before{
+    width: 100%;
+}
+.has-val.input + .focus-input2::before{
+    width: 100%;
+}
+input[type="number"]{
+    overflow: hidden;
+}
+/********************RESPONSIVE***************/
+
+@media(max-width:1250px){
+    .container{
+        width: 90%;
+    }
+}
+@media(max-width:768px){
+    .container{
+        width: 100%;
+        height: 100vh !important;
+        position: static;
+        transform: translate(0,0);
+    }
+}
+@media(max-width:1000px){
+    .image{
+        display: none;
+    }
+    .container{
+        height: 95vh;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media(max-width:500px){
+    .wrap{
+        flex-direction: column;
+    }
+    .f1,.f2{
+        width: 100%;
+        margin: 0px;
+    }
+}
+ /* Designing dialog box */
+        #confirm {
+            display: none;
+            background-image: linear-gradient(to right, #66a80f, #c0eb75);
+            background-size:cover;
+            color: white;
+            position: absolute;
+            width: 350px;
+            border-radius: 5px;
+            left: 50%;
+            margin-left: -160px;
+            padding: 16px 8px 8px;
+            box-sizing: border-box;
+            
+        }
+#confirm .no {
+            background-color: #445a94;
+            color:white;
+            top:25%;
+            left:25%;
+            padding:5px;
+            border-radius: 5px;
+            border: 2px solid white;
+            text-align:center;
+            width: 95px;
+            float: right;
+        }
+          
+        #confirm .no:hover {
+            background-color: #99e9f2;
+  
+        }
+          
+        /* Dialog box message decorating */
+        #confirm .message {
+            text-align: center;
+            padding: 10px 30px;
+        }        
+</style>
+</head>
+<body>
+<form>
+    <div class="container">
+        <div class="form">
+            <div class="heading">
+                <img src="C:/Users/prana/OneDrive/Documents/PDE//Logo1.png" class="logo">
+                <h1>Confirm Your Payment</h1>
+            </div>
+            <!--Form-->
+            <div class="wrap">
+                <div class="f1">
+                    <label>CVV</label>
+                    <input type="number" maxlength="3">
+                    <span class="focus-input"></span>
+                </div>
+            </div>
+            <div class="wrap2">
+                <label>Card Number</label>
+                <input type="number">
+                <span class="focus-input2"></span>
+            </div>
+             <div class="wrap2">
+                <label>PharmaCare Password</label>
+                <input type="password">
+                <span class="focus-input2"></span>
+            </div>
+            <div class="wrap2">
+                <label>Card Name</label>
+                <input type="text">
+                <span class="focus-input2"></span>
+            </div>
+           <div class="wrap2">
+                <label>Expiration Date</label>
+                <input type="text" placeholder="mm/yyyy">
+                <span class="focus-input2"></span>
+            </div>
+          <div id="confirm">
+        <div class="message">
+            Congratulations<br>Your transaction done Successfully ...</div>
+        <button class="no">
+        <a href="C:/Users/prana/OneDrive/Documents/PDE//index.html" style="text-decoration:none;color:white;">OK</a></button>
+    </div>
+            <input type="button" value="Submit" class="btn" onclick="geeks();">
+         </div>
+        <!--Image-->
+        <div class="image">
+            <img src="C:/Users/prana/OneDrive/Documents/PDE//Medical.png" class="img" alt=""/>
+        </div>
+</div>
+</div>
+
+</form>
+</body>
+</html>

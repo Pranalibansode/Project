@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>PharmaCare Sign Up and Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+             <link rel="stylesheet" href="C:/Users/prana/OneDrive/Documents/PDE//style4.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+	<form class="signUp">
+                                  <img src="C:/Users/prana/OneDrive/Documents/PDE//Profile.png" height="80px" width="150px" ></img>
+		<h3>Create Free Account</h3>
+		<p style="size:16">Stay SAFE , and HAPPY<br></p>
+                                  <br><br>
+		<input class="w100" type="email" placeholder="Insert Email" reqired autocomplete='off' />
+		<input type="password" placeholder="Insert Password" reqired />
+		<input type="password" placeholder="Verify Password" reqired />
+		<button class="form-btn sx log-in" type="button">Log In</button>
+                                  <button class="form-btn dx" type="submit"> 
+                                  <a href="C:/Users/prana/OneDrive/Documents/PDE//index.html" style="color:white;text-decoration:none;">
+                                  Sign Up</a></button>
+	</form>
+	<form class="signIn">
+                                  <img src="C:/Users/prana/OneDrive/Documents/PDE//Profile.png" height="80px" width="150px" ></img>
+		<h3>Welcome<br>Back !</h3>
+                                  <p style="size:16">Stay SAFE , and HAPPY<br></p>
+                                  <br>
+		<input type="email" placeholder="Insert Email" autocomplete='off' reqired />
+		<input type="password" placeholder="Insert Password" reqired />
+                                  <h4>Forgot Password</h4>
+		<button class="form-btn sx back" type="button">Back</button>
+                                  <button class="form-btn dx" type="submit">
+                                  <a href="C:/Users/prana/OneDrive/Documents/PDE//index.html" style="color:white;text-decoration:none;">
+                                  Log In</a></button>
+	</form>
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script  src="C:/Users/prana/OneDrive/Documents/PDE//main.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+</body>
+
+</html>
